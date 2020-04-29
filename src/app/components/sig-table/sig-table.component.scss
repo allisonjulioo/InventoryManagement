@@ -1,0 +1,162 @@
+@import "../../../styles/index";
+
+:hostsig-table {
+  width: 100%;
+  .table {
+    width: 100%;
+    .head {
+      font-size: $size-md;
+      width: 100%;
+      margin: 20px 0 0;
+      @include flex-center-spaced;
+      .td {
+        padding-left: 0;
+      }
+      @media (max-width: 981px) {
+        display: none;
+      }
+    }
+    .body {
+      .data {
+        width: 100%;
+        transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        @include flex-center-spaced;
+        &.close {
+          width: 80%;
+          @media (max-width: 981px) {
+            width: 100%;
+          }
+        }
+      }
+      .leave {
+        width: 0%;
+        transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        margin-right: -20px;
+        height: 100%;
+        padding: 0;
+        @include flex-center-spaced;
+        background: $primary;
+        overflow: hidden;
+
+        sig-button:last-child img {
+          filter: invert(1);
+        }
+        @media (max-width: 981px) {
+          background: $secondary;
+          position: absolute;
+          right: 0;
+          flex-direction: column;
+          justify-content: center;
+        }
+        &.open {
+          width: 20%;
+          padding: 0 12px;
+          @media (max-width: 981px) {
+            width: calc(100% + 20px);
+            margin: 0 -20px;
+          }
+        }
+        .title {
+          h5 {
+            font-size: 12px;
+            margin: 0 0 4px;
+            padding: 0;
+            white-space: nowrap;
+            color: $white;
+          }
+          sig-input {
+            input {
+              height: 24px;
+              margin: 0;
+              width: 80px;
+              padding: 0 4px;
+              text-align: center;
+              @media (max-width: 981px) {
+                height: 40px;
+                margin: 8px 0;
+                width: 100%;
+              }
+            }
+          }
+        }
+        sig-button {
+          button {
+            background: transparent;
+          }
+        }
+      }
+      .tr {
+        height: 60px;
+        background: $white;
+        position: relative;
+        opacity: 1;
+        animation: fade 0.2s linear;
+        .td {
+          font-size: $size-md;
+          padding-left: 4px;
+          color: $black;
+          small {
+            display: none;
+          }
+        }
+        &:hover {
+          box-shadow: 0 3px 3px 0px rgba($black, 0.03);
+        }
+        @media (max-width: 981px) {
+          height: auto;
+          padding: 20px;
+          .data {
+            display: block;
+            position: relative;
+            .td {
+              margin: 0 0 12px;
+              width: 100%;
+              display: block;
+              small {
+                display: block;
+                color: #949494;
+                font-size: 11px;
+                margin-bottom: 4px;
+              }
+              &:last-child {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tr {
+      @include flex-center-spaced;
+      width: 100%;
+      margin: 0 0 12px;
+      padding: 0 20px;
+      .td {
+        font-size: $size-sm;
+        color: $light-grey;
+        &:last-child {
+          text-align: right;
+        }
+        sig-button {
+          margin: 0 0 0 12px;
+        }
+      }
+      .td {
+        flex: 1 1 200px;
+        @media (max-width: 981px) {
+          img {
+            filter: brightness(0.1);
+          }
+        }
+      }
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.input-form {
+  label {
+    font-weight: bold;
+    font-size: $size-md;
+    color: $black;
+  }
+  input {
+    height: 48px;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    padding: 0 12px;
+    margin: 12px 0;
+    border-radius: 2px;
+    outline: none;
+    &::placeholder {
+      color: $light-grey;
+    }
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+}

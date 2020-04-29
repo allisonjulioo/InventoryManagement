@@ -1,0 +1,78 @@
+@import "../../../styles/index";
+
+:hostsig-button {
+  @media (max-width: 981px) {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    text-align: center;
+    float: none !important;
+    margin: 0 auto;
+  }
+  button {
+    height: 40px;
+    color: #5d5d5d;
+    border: none;
+    padding: 0 28px;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    @media (max-width: 981px) {
+      width: 100%;
+      height: 60px;
+    }
+    &:last-child {
+      margin-left: 12px;
+      @media (max-width: 981px) {
+        margin-left: 0;
+        margin-top: 12px;
+      }
+    }
+    &:hover {
+      opacity: 0.97;
+      box-shadow: 0 6px 12px 2px rgba($black, 0.16);
+    }
+    &:active {
+      filter: brightness(85%);
+      box-shadow: 0 6px 12px 2px rgba($black, 0.1);
+    }
+    &.primary {
+      background: $primary;
+      color: $white;
+    }
+    &.secondary {
+      background: $secondary;
+      color: $white;
+    }
+    &.tertiary {
+      background: $tertiary;
+    }
+    &.btn {
+      background: $btn;
+      color: $white;
+    }
+    &.transparent {
+      border: 1px solid transparent;
+      background: transparent !important;
+      &:hover {
+        box-shadow: none;
+        border: 1px solid $light-grey;
+      }
+    }
+    &.icon {
+      padding: 0;
+      height: 28px;
+      width: 28px;
+      background: #fff;
+      line-height: 2.8;
+      &:hover {
+        opacity: 0.80;
+        box-shadow: none;
+        border: none;
+      }
+      &:active {
+        filter: brightness(95%);
+      }
+    }
+  }
+}

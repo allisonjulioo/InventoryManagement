@@ -1,0 +1,8 @@
+@import "../../../styles/index";
+
+:hostinventory {
+  .top {
+    @include flex-center-spaced;
+    margin-bottom: 28px;
+  }
+}

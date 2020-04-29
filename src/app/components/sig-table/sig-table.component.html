@@ -1,0 +1,53 @@
+<div class="table">
+  <div class="head" *ngIf="data && data.length">
+    <div class="tr">
+      <span class="td">ID</span>
+      <span class="td">Descrição</span>
+      <span class="td">Quantidade</span>
+      <span class="td">Entrada</span>
+      <span class="td">Ações</span>
+    </div>
+  </div>
+  <div class="body">
+    <div class="empty" *ngIf="data && !data.length">
+      <img src="./assets/404.gif" alt="d" width="200">
+      <p>Parece que não há nada por aqui</p>
+      <sig-button btn="btn" [routerLink]="['/received', 0]">
+        + Adicionar produto
+      </sig-button>
+    </div>
+    <div class="tr" *ngFor="let d of data; let idx = index">
+      <section class="data" [ngClass]="{'close': idx === index}">
+        <span class="td"> <small>ID:</small> {{d.id}}</span>
+        <span class="td"> <small>Descrição:</small> {{d.description}}</span>
+        <span class="td"> <small>Quantidade:</small> {{d.quant}}</span>
+        <span class="td"> <small>Entrada:</small> {{d.input | date:"dd/MM/yyyy - hh:mm"}}</span>
+        <span class="td">
+          <sig-button btn="icon" [routerLink]="['/received', d.id]" title="Editar">
+            <img src="./assets/pen.png" alt="p">
+          </sig-button>
+          <sig-button btn="icon" (click)="onDelete(d.id)" title="Deletar">
+            <img src="./assets/delete.png" alt="d">
+          </sig-button>
+          <sig-button btn="icon">
+            <img src="./assets/exchange.png" alt="e" (click)="toggleOpen(idx)" title="Saída rápida">
+          </sig-button>
+        </span>
+      </section>
+      <section class="leave" [ngClass]="{'open': idx === index}">
+        <div class="title">
+          <h5 class="td">Quantidade de saida</h5>
+          <sig-input>
+            <input type="number" [max]="d.quant" min="0" [(ngModel)]="leaveQuant">
+          </sig-input>
+        </div>
+        <sig-button btn="icon transparent" (click)="onUpdate(d); toggleOpen(idx)" *ngIf="leaveQuant > 0">
+          <img src="./assets/save.png" alt="">
+        </sig-button>
+        <sig-button btn="icon transparent" (click)="toggleOpen(idx)" *ngIf="leaveQuant >= 0">
+          <img src="./assets/cancel.png" alt="">
+        </sig-button>
+      </section>
+    </div>
+  </div>
+</div>

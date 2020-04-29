@@ -1,0 +1,28 @@
+@import "../styles/colors";
+
+:hostroot {
+  display: flex;
+  height: 100%;
+  .app {
+    width: 100%;
+    display: block;
+    .content {
+      padding: 3em;
+      display: block;
+      max-width: 1280px;
+      margin: 0 auto;
+      .title {
+        padding: 0 0 1.2em;
+        color: $black;
+      }
+      @media (max-width: 981px) {
+        padding: 4em 1em;
+        max-width: 95%;
+        margin: 0 auto 60px;
+        .title {
+          padding: 0 0 0.5em;
+        }
+      }
+    }
+  }
+}

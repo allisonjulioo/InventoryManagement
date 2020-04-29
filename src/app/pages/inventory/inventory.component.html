@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="top" *ngIf="data && data.length">
+    <h5>Controle de estoque</h5>
+    <sig-button [routerLink]="['/received', 0]" btn="btn">+ Receber</sig-button>
+  </div>
+  <div class=" table">
+    <sig-table [data]="data" (delete)="deleteProduct($event)" (update)="updateProduct($event)"></sig-table>
+  </div>
+</div>

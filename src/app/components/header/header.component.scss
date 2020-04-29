@@ -1,0 +1,32 @@
+@import "../../../styles/index";
+
+:hostheader {
+  width: 100%;
+  height: 48px;
+  padding: 1em;
+  margin: 0 0 1em;
+  border-bottom: 1px solid rgba($light-grey, 0.3);
+  @include flex-center-spaced;
+  .branding {
+    display: none;
+  }
+  @media (max-width: 981px) {
+    background: $primary;
+    position: fixed;
+    top: 0;
+    z-index: +5;
+    .header {
+      .branding {
+        display: block;
+        margin: 0 16px 0 0;
+        position: relative;
+        bottom: -6px;
+      }
+      width: 100%;
+      @include flex-center;
+      * {
+        color: $white;
+      }
+    }
+  }
+}

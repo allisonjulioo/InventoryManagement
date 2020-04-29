@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="top">
+    <h5>{{this.prodId != 0 ? "Editar produto" :"Entrada de produtos"}}</h5>
+  </div>
+  <form class="form" [formGroup]="productForm" (ngSubmit)="onFormSubmit()">
+    <sig-input type="text">
+      <label>Produto</label>
+      <input type="text" placeholder="Descreva o produto" formControlName="description">
+    </sig-input>
+    <sig-input type="text">
+      <label>Quantidade</label>
+      <input type="number" min="0" placeholder="Descreva o produto" formControlName="quant">
+    </sig-input>
+    <sig-button type="submit" btn="btn">{{this.prodId != 0 ? "Atualizar" :"Dar entrada"}}
+    </sig-button>
+    <sig-button type="button" [routerLink]="['/inventory']" btn="tertiary transparent">Cancelar</sig-button>
+  </form>
+</div>
