@@ -1,20 +1,24 @@
 # Inventory Management
-Esse teste foi escrito em angular usando a versão 9.1.3
+this product has coding using Angular CLI 9.1.3
  
+## Demo
 
-## Principais dependências de trerceiros
+[See product demo](https://https//inventory-management-ng.netlify.app)
+
+
+## Principals dependencies
 
 - NGRX
 - RXJS 
 
-## Para rodar o projeto siga os comandos
+## Run project
 
-### Instalar dependências `yarn` ou `npm install`
-### Iniciar projeto `yarn start` ou `npm start` 
-### Rodar testes `yarn test` ou `npm test`
+### Install dependencies `yarn` or `npm install`
+### Init project `yarn start` or `npm start` 
+### Run tests `yarn test` or `npm test`
 
 
-## Arquitetura do projeto
+## Project architecture
 
 src
   app
@@ -31,13 +35,13 @@ src
   assets 
   styles
  
- ## Informações do projeto
+ ## Project infos
 
  Todo o estilo do projeto foi contruido em typescript. </br>
  As chamadas são de uma api real que construi para esse projeto</br> 
  Algumas das informações estão trafegando via Ngrx.
 
-## Importante!!!
+## Important!!!
 
 A aplicação esta sendo servida por um component chamado json-server, esse component tem a função de expor um aruivo json que é servido como api, temos todos os verbos http GET POST PUT PATCH DELETE
 
