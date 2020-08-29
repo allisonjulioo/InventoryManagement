@@ -3,7 +3,7 @@ this product has coding using Angular CLI 9.1.3
  
 ## Demo
 
-[See product demo](https://https//inventory-management-ng.netlify.app)
+[See product demo](https://inventory-management-ng.netlify.app)
 
 
 ## Principals dependencies
