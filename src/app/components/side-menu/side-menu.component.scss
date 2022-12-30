@@ -61,13 +61,13 @@
         margin-left: 12px;
       }
       &:hover {
-        background: #e65c32;
+        background: #2a42bb;
       }
       &:active {
-        background: #de572c;
+        background: #2a42bb;
       }
       &.active {
-        background: #de572c;
+        background: #2a42bb;
         @media (max-width: 981px) {
           background: #f1f1f1;
           color: $grey;
