@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://api-generic-alink.herokuapp.com"
+  apiUrl: "https://generic-api.alink.digital"
 };
